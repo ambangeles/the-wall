@@ -1,0 +1,105 @@
+@import url("./global.less");
+
+div.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid red;
+
+	div.form-container {
+		background-color: @bg-color;
+		width: 857px;
+		min-height: 889px;
+		display: flex;
+		justify-content: center;
+
+		form {
+			.box;
+			height: 568px;
+			width: 450px;
+			padding: 40px;
+			margin-top: 80px;
+			box-sizing: border-box;
+
+			& > p {
+				margin-top: 0;
+				margin-bottom: 50px;
+				font-weight: bold;
+				font-size: 22px;
+                color: @primary-color;
+			}
+
+			h1 {
+				color: @font-color;
+			}
+
+			label {
+				display: block;
+                margin-top: 15px;
+
+				span.label-name {
+					display: flex;
+					justify-content: space-between;
+                    color: @font-color;
+					margin-bottom: 10px;
+                    
+                    span {
+                        a {
+                            color: rgba(0, 0, 0, 0.5);
+                            text-decoration: none;
+							font-size: 14px;
+                        }
+                    }
+				}
+
+				input {
+					width: 370px;
+					height: 55px;
+					border-radius: 4px;
+					background-color: rgba(44, 107, 255, 0.08);
+					border: none;
+                    margin-bottom: 5px;
+				}
+
+                span.error-msg {
+                    color: @error-color;
+                    font-size: 14px;
+                    visibility: hidden;
+                }
+			}
+		}
+
+        div {
+            text-align: center;
+			margin-top: 20px;
+
+            input[type="submit"] {
+                .button;
+                width: 150px;
+                height: 55px;
+            }
+
+            p {
+                color: rgba(0, 0, 0, 0.2);
+				margin-top: 35px;
+
+                a {
+                    color: @primary-color;
+                    text-decoration: none;
+                }
+            }
+        }
+	}
+
+	div.side {
+		background-color: @side-color;
+		flex: 1;
+		position: relative;
+
+		img {
+			position: absolute;
+			left: -70px;
+			top: 150px;
+		}
+	}
+}

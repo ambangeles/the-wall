@@ -1,0 +1,296 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+* {
+  font-family: Poppins;
+}
+.box {
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+.button {
+  background-color: #2C6BFF;
+  border-radius: 4px;
+  border: none;
+  color: white;
+}
+div.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #FBFBFB;
+  border: 1px solid red;
+}
+div.container header {
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 121px;
+  padding-inline: 80px;
+  color: #152C61;
+}
+div.container header nav {
+  display: flex;
+  align-items: center;
+}
+div.container header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #2C6BFF;
+  font-weight: bold;
+}
+div.container main {
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  margin: 50px 80px;
+  min-height: 800px;
+  padding: 70px;
+}
+div.container main div.create-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.container main div.create-message p {
+  color: #707070;
+}
+div.container main div.create-message p span {
+  color: #2C6BFF;
+  font-weight: bold;
+}
+div.container main div.create-message button {
+  background-color: #2C6BFF;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 190px;
+  height: 38px;
+}
+div.container main div.no-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.container main div.no-posts p {
+  color: #707070;
+}
+div.container main div.posts {
+  min-height: 144px;
+}
+div.container main div.posts div.post {
+  border: 1px solid #dce6ff;
+  padding: 20px;
+  border-radius: 6px;
+  margin-block: 20px;
+  box-sizing: border-box;
+}
+div.container main div.posts div.post .message {
+  color: #152c61;
+  resize: none;
+  width: 98%;
+  height: 84px;
+  border: 1px solid #dce6ff;
+  background-color: #f5f8ff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+div.container main div.posts div.post .message:disabled {
+  border: none;
+  height: auto;
+  background-color: white;
+}
+div.container main div.posts div.post ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  color: #707070;
+  margin-bottom: 0;
+}
+div.container main div.posts div.post ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-inline: 10px;
+}
+div.container main div.posts div.post ul li .blue {
+  color: #2C6BFF;
+}
+div.container main div.posts div.post .update-buttons {
+  margin-top: 20px;
+  text-align: right;
+  display: none;
+}
+div.container main div.posts div.post .update-buttons .update-button {
+  background-color: #2C6BFF;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 190px;
+  height: 38px;
+}
+div.container main div.posts div.post .update-buttons .update-cancel-button {
+  border: none;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+}
+div.container main div.posts div.post .comment-textarea {
+  width: 100%;
+  height: 84px;
+  resize: none;
+  border: 1px solid #dce6ff;
+  background-color: #f5f8ff;
+  border-radius: 6px;
+}
+div.container main div.posts div.post .post-comment-button {
+  background-color: #2C6BFF;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 190px;
+  height: 38px;
+  margin-top: 20px;
+}
+div.delete-message-modal,
+div.delete-comment-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+div.delete-message-modal div.modal-content,
+div.delete-comment-modal div.modal-content {
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  width: 540px;
+  height: 307px;
+  text-align: center;
+  word-wrap: break-word;
+}
+div.delete-message-modal div.modal-content .close-button,
+div.delete-comment-modal div.modal-content .close-button {
+  float: right;
+  cursor: pointer;
+}
+div.delete-message-modal div.modal-content h2,
+div.delete-comment-modal div.modal-content h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #152C61;
+}
+div.delete-message-modal div.modal-content p,
+div.delete-comment-modal div.modal-content p {
+  padding-inline: 50px;
+  color: #152C61;
+  margin-bottom: 40px;
+}
+div.delete-message-modal div.modal-content .cancel-button,
+div.delete-comment-modal div.modal-content .cancel-button {
+  border: none;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  margin-right: 100px;
+}
+div.delete-message-modal div.modal-content .delete-button,
+div.delete-comment-modal div.modal-content .delete-button {
+  background-color: #2C6BFF;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 210px;
+  height: 46px;
+  font-size: 18px;
+}
+div.add-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+div.add-modal div.modal-content {
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  width: 937px;
+  height: 423px;
+  text-align: center;
+  word-wrap: break-word;
+}
+div.add-modal div.modal-content .close-button {
+  float: right;
+  cursor: pointer;
+}
+div.add-modal div.modal-content h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+div.add-modal div.modal-content form textarea {
+  resize: none;
+  width: 835px;
+  height: 185px;
+  background-color: #f5f8ff;
+  border: 1px solid #dce6ff;
+  border-radius: 6px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+div.add-modal div.modal-content form div {
+  text-align: right;
+  padding-right: 35px;
+  margin-top: 30px;
+}
+div.add-modal div.modal-content form div button {
+  border: none;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+div.add-modal div.modal-content form div input[type="submit"] {
+  background-color: #2C6BFF;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 190px;
+  height: 40px;
+  cursor: pointer;
+}
+div.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+.show-comment {
+  display: none;
+}
+.disabled {
+  background-color: #2C6BFF;
+  opacity: 50%;
+}
